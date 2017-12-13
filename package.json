@@ -1,0 +1,39 @@
+{
+  "name": "@colorfulwindmill/five-films-service",
+  "version": "1.0.0",
+  "description": "",
+  "author": "colorfulwindmill",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/denghejun/five-films-service.git"
+  },
+  "main": "index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "react-native-modular-bootstrapper": "^1.1.0",
+    "@colorfulwindmill/five-films-interface": "^1.0.0",
+    "inversify": "^4.3.0",
+    "reflect-metadata": "^0.1.10",
+    "expo": "^23.0.0",
+    "merge": "^1.2.0",
+    "react": "16.0.0",
+    "react-native": "https://github.com/expo/react-native/archive/sdk-23.0.0.tar.gz"
+  },
+  "peerDependencies": {
+    "react-native-modular-bootstrapper": "*",
+    "@colorfulwindmill/five-films-interface": "*",
+    "inversify": "*",
+    "reflect-metadata": "*",
+    "expo": "*",
+    "merge": "*",
+    "react": "*",
+    "react-native": "*"
+  },
+  "devDependencies": {
+    "@types/react": "^16.0.4",
+    "@types/react-native": "^0.50.7"
+  }
+}
