@@ -1,6 +1,6 @@
 import { Movie, ServiceType, Location, Common } from '@colorfulwindmill/five-films-interface'
 import { Container, injectable } from 'inversify'
-import * as Services from './services'
+import * as Services from './index'
 import { ServiceContract } from 'react-native-modular-bootstrapper'
 
 @injectable()
