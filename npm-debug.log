@@ -1,0 +1,141 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/Users/hjdeng/.nvm/versions/node/v6.11.3/bin/node',
+1 verbose cli   '/Users/hjdeng/.nvm/versions/node/v6.11.3/bin/npm',
+1 verbose cli   'publish',
+1 verbose cli   '--access=public' ]
+2 info using npm@3.10.10
+3 info using node@v6.11.3
+4 verbose publish [ '.' ]
+5 silly cache add args [ '.', null ]
+6 verbose cache add spec .
+7 silly cache add parsed spec Result {
+7 silly cache add   raw: '.',
+7 silly cache add   scope: null,
+7 silly cache add   escapedName: null,
+7 silly cache add   name: null,
+7 silly cache add   rawSpec: '.',
+7 silly cache add   spec: '/Users/hjdeng/coding/github/five-films-service',
+7 silly cache add   type: 'directory' }
+8 verbose addLocalDirectory /Users/hjdeng/.npm/@colorfulwindmill/five-films-service/1.0.0/package.tgz not in flight; packing
+9 verbose correctMkdir /Users/hjdeng/.npm correctMkdir not in flight; initializing
+10 info lifecycle @colorfulwindmill/five-films-service@1.0.0~prepublish: @colorfulwindmill/five-films-service@1.0.0
+11 silly lifecycle @colorfulwindmill/five-films-service@1.0.0~prepublish: no script for prepublish, continuing
+12 verbose tar pack [ '/Users/hjdeng/.npm/@colorfulwindmill/five-films-service/1.0.0/package.tgz',
+12 verbose tar pack   '/Users/hjdeng/coding/github/five-films-service' ]
+13 verbose tarball /Users/hjdeng/.npm/@colorfulwindmill/five-films-service/1.0.0/package.tgz
+14 verbose folder /Users/hjdeng/coding/github/five-films-service
+15 verbose addLocalTarball adding from inside cache /Users/hjdeng/.npm/@colorfulwindmill/five-films-service/1.0.0/package.tgz
+16 verbose correctMkdir /Users/hjdeng/.npm correctMkdir not in flight; initializing
+17 silly cache afterAdd @colorfulwindmill/five-films-service@1.0.0
+18 verbose afterAdd /Users/hjdeng/.npm/@colorfulwindmill/five-films-service/1.0.0/package/package.json not in flight; writing
+19 verbose correctMkdir /Users/hjdeng/.npm correctMkdir not in flight; initializing
+20 verbose afterAdd /Users/hjdeng/.npm/@colorfulwindmill/five-films-service/1.0.0/package/package.json written
+21 silly publish { name: '@colorfulwindmill/five-films-service',
+21 silly publish   version: '1.0.0',
+21 silly publish   description: '',
+21 silly publish   author: { name: 'colorfulwindmill' },
+21 silly publish   license: 'ISC',
+21 silly publish   repository:
+21 silly publish    { type: 'git',
+21 silly publish      url: 'git+https://github.com/denghejun/five-films-service.git' },
+21 silly publish   main: 'index.ts',
+21 silly publish   scripts: { test: 'node ./node_modules/jest/bin/jest.js --watch' },
+21 silly publish   jest:
+21 silly publish    { preset: 'jest-expo-ts',
+21 silly publish      setupFiles: [ './jest-setup.js' ],
+21 silly publish      transformIgnorePatterns: [ '!node_modules/@colorfulwindmill/five-films-interface/' ],
+21 silly publish      testMatch: [ '**/?(*.)(spec|test).ts?(x)' ] },
+21 silly publish   dependencies:
+21 silly publish    { 'react-native-modular-bootstrapper': '^1.1.0',
+21 silly publish      '@colorfulwindmill/five-films-interface': '^1.0.0',
+21 silly publish      inversify: '^4.3.0',
+21 silly publish      'reflect-metadata': '^0.1.10',
+21 silly publish      expo: '^23.0.0',
+21 silly publish      merge: '^1.2.0',
+21 silly publish      react: '16.0.0',
+21 silly publish      'react-native': 'https://github.com/expo/react-native/archive/sdk-23.0.0.tar.gz' },
+21 silly publish   peerDependencies:
+21 silly publish    { 'react-native-modular-bootstrapper': '*',
+21 silly publish      '@colorfulwindmill/five-films-interface': '*',
+21 silly publish      inversify: '*',
+21 silly publish      'reflect-metadata': '*',
+21 silly publish      expo: '*',
+21 silly publish      merge: '*',
+21 silly publish      react: '*',
+21 silly publish      'react-native': '*' },
+21 silly publish   devDependencies:
+21 silly publish    { typescript: '^2.6.2',
+21 silly publish      '@types/jest': '^20.0.8',
+21 silly publish      'jest-expo-ts': '^21.0.0',
+21 silly publish      '@types/react': '^16.0.4',
+21 silly publish      '@types/react-native': '^0.50.7',
+21 silly publish      xhr2: '^0.1.4',
+21 silly publish      'react-native-typescript-transformer': '^1.1.4',
+21 silly publish      'babel-plugin-root-import': '^5.1.0' },
+21 silly publish   gitHead: '2d2d98cd10a3eadcbe698eaaaea34812aa129dfe',
+21 silly publish   bugs: { url: 'https://github.com/denghejun/five-films-service/issues' },
+21 silly publish   readme: 'ERROR: No README data found!',
+21 silly publish   homepage: 'https://github.com/denghejun/five-films-service#readme',
+21 silly publish   _id: '@colorfulwindmill/five-films-service@1.0.0',
+21 silly publish   _shasum: 'bafc153f7cb3d595abfd431dfe25e34752f832b5',
+21 silly publish   _from: '.' }
+22 verbose getPublishConfig undefined
+23 silly mapToRegistry name @colorfulwindmill/five-films-service
+24 silly mapToRegistry scope (from package name) @colorfulwindmill
+25 verbose mapToRegistry no registry URL found in name for scope @colorfulwindmill
+26 silly mapToRegistry using default registry
+27 silly mapToRegistry registry https://registry.npmjs.org/
+28 silly mapToRegistry data Result {
+28 silly mapToRegistry   raw: '@colorfulwindmill/five-films-service',
+28 silly mapToRegistry   scope: '@colorfulwindmill',
+28 silly mapToRegistry   escapedName: '@colorfulwindmill%2ffive-films-service',
+28 silly mapToRegistry   name: '@colorfulwindmill/five-films-service',
+28 silly mapToRegistry   rawSpec: '',
+28 silly mapToRegistry   spec: 'latest',
+28 silly mapToRegistry   type: 'tag' }
+29 silly mapToRegistry uri https://registry.npmjs.org/@colorfulwindmill%2ffive-films-service
+30 verbose publish registryBase https://registry.npmjs.org/
+31 silly publish uploading /Users/hjdeng/.npm/@colorfulwindmill/five-films-service/1.0.0/package.tgz
+32 verbose request uri https://registry.npmjs.org/@colorfulwindmill%2ffive-films-service
+33 verbose request sending authorization for write operation
+34 info attempt registry request try #1 at 7:39:50 PM
+35 verbose request using bearer token for auth
+36 verbose request id 0aa1b0b81630c1ac
+37 http request PUT https://registry.npmjs.org/@colorfulwindmill%2ffive-films-service
+38 http 403 https://registry.npmjs.org/@colorfulwindmill%2ffive-films-service
+39 verbose headers { 'content-type': 'application/json',
+39 verbose headers   'cache-control': 'max-age=0',
+39 verbose headers   'content-length': '91',
+39 verbose headers   'accept-ranges': 'bytes',
+39 verbose headers   date: 'Thu, 14 Dec 2017 11:39:50 GMT',
+39 verbose headers   via: '1.1 varnish',
+39 verbose headers   connection: 'keep-alive',
+39 verbose headers   'x-served-by': 'cache-hkg17932-HKG',
+39 verbose headers   'x-cache': 'MISS',
+39 verbose headers   'x-cache-hits': '0',
+39 verbose headers   'x-timer': 'S1513251590.675517,VS0,VE1155' }
+40 verbose request invalidating /Users/hjdeng/.npm/registry.npmjs.org/_40colorfulwindmill_252ffive-films-service on PUT
+41 error publish Failed PUT 403
+42 verbose stack Error: You cannot publish over the previously published version 1.0.0. : @colorfulwindmill/five-films-service
+42 verbose stack     at makeError (/Users/hjdeng/.nvm/versions/node/v6.11.3/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:302:12)
+42 verbose stack     at CachingRegistryClient.<anonymous> (/Users/hjdeng/.nvm/versions/node/v6.11.3/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:290:14)
+42 verbose stack     at Request._callback (/Users/hjdeng/.nvm/versions/node/v6.11.3/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:210:14)
+42 verbose stack     at Request.self.callback (/Users/hjdeng/.nvm/versions/node/v6.11.3/lib/node_modules/npm/node_modules/request/request.js:187:22)
+42 verbose stack     at emitTwo (events.js:106:13)
+42 verbose stack     at Request.emit (events.js:191:7)
+42 verbose stack     at Request.<anonymous> (/Users/hjdeng/.nvm/versions/node/v6.11.3/lib/node_modules/npm/node_modules/request/request.js:1048:10)
+42 verbose stack     at emitOne (events.js:96:13)
+42 verbose stack     at Request.emit (events.js:188:7)
+42 verbose stack     at IncomingMessage.<anonymous> (/Users/hjdeng/.nvm/versions/node/v6.11.3/lib/node_modules/npm/node_modules/request/request.js:969:12)
+43 verbose statusCode 403
+44 verbose pkgid @colorfulwindmill/five-films-service
+45 verbose cwd /Users/hjdeng/coding/github/five-films-service
+46 error Darwin 16.7.0
+47 error argv "/Users/hjdeng/.nvm/versions/node/v6.11.3/bin/node" "/Users/hjdeng/.nvm/versions/node/v6.11.3/bin/npm" "publish" "--access=public"
+48 error node v6.11.3
+49 error npm  v3.10.10
+50 error code E403
+51 error You cannot publish over the previously published version 1.0.0. : @colorfulwindmill/five-films-service
+52 error If you need help, you may report this error at:
+52 error     <https://github.com/npm/npm/issues>
+53 verbose exit [ 1, true ]
