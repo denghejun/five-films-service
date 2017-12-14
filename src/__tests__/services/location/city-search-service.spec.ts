@@ -1,17 +1,8 @@
-import 'react-native'
-import * as React from 'react'
-import * as renderer from 'react-test-renderer';
-import { ServiceType } from '@colorfulwindmill/five-films-interface'
-import { AppBootstrapper, Container } from 'react-native-modular-bootstrapper'
-import { Constants, Location, Permissions } from 'expo';
-
-beforeAll(() => {
-  AppBootstrapper.startup(null);
-});
+import { CitySearchService } from '../../../index'
 
 it('[current-city-search : 01] should get a valid city name', async () => {
   // given
-  const service: Location.LocationSearchService = Container.get<Location.LocationSearchService>(ServiceType.TYPE_LOCAION.CITY_SEARCH);
+  const service = new CitySearchService();
 
   // when
   const cityName = await service.getCurrentCityName();

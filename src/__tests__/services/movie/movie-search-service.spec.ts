@@ -1,13 +1,6 @@
-import 'react-native'
-import * as React from 'react'
-import * as renderer from 'react-test-renderer';
-import { Movie, ServiceType, Common } from '@colorfulwindmill/five-films-interface'
-import { AppBootstrapper, Container } from 'react-native-modular-bootstrapper'
+import { Movie, Common } from '@colorfulwindmill/five-films-interface'
 import { MovieServiceSpecHelper } from './movie-service'
-
-beforeAll(() => {
-  AppBootstrapper.startup(null);
-})
+import { MovieSearchService } from '../../../index'
 
 it('[movie-search-service : 01] should get a valid movie when giving valid movie name',
   async () => {
@@ -15,7 +8,7 @@ it('[movie-search-service : 01] should get a valid movie when giving valid movie
     const q: Movie.MovieSearchRequest = { q: '猫和老鼠' };
 
     // when
-    const service: Movie.MovieSearchService = AppBootstrapper.Instance.container.get<Movie.MovieSearchService>(ServiceType.TYPE_MOVIE.SEARCH);
+    const service = new MovieSearchService();
 
     // then
     await service.search(q).then(response => {

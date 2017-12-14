@@ -25,7 +25,6 @@
     ]
   },
   "dependencies": {
-    "react-native-modular-bootstrapper": "^1.1.0",
     "@colorfulwindmill/five-films-interface": "^1.0.0",
     "inversify": "^4.3.0",
     "reflect-metadata": "^0.1.10",
@@ -35,7 +34,6 @@
     "react-native": "https://github.com/expo/react-native/archive/sdk-23.0.0.tar.gz"
   },
   "peerDependencies": {
-    "react-native-modular-bootstrapper": "*",
     "@colorfulwindmill/five-films-interface": "*",
     "inversify": "*",
     "reflect-metadata": "*",

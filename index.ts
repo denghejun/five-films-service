@@ -1,1 +1,1 @@
-export * from './src/ServiceModule'
+export * from './src'

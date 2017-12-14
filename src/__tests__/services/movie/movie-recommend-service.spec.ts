@@ -1,13 +1,6 @@
-import 'react-native'
-import * as React from 'react'
-import * as renderer from 'react-test-renderer';
-import { Movie, Common, ServiceType } from '@colorfulwindmill/five-films-interface'
-import { AppBootstrapper, Container } from 'react-native-modular-bootstrapper'
+import { Movie, Common } from '@colorfulwindmill/five-films-interface'
 import { MovieServiceSpecHelper } from './movie-service'
-
-beforeAll(() => {
-  AppBootstrapper.startup(null);
-})
+import { MovieRecommendService } from '../../../index'
 
 it('[movie-recommend-service : 01] should get recommend movie response successfully when giving valid city name',
   async () => {
@@ -15,7 +8,7 @@ it('[movie-recommend-service : 01] should get recommend movie response successfu
     const q: Movie.MovieRecommendRequest = { city: '成都' };
 
     // when
-    const service: Movie.MovieRecommendService = Container.get<Movie.MovieRecommendService>(ServiceType.TYPE_MOVIE.RECOMMEND);
+    const service = new MovieRecommendService();
 
     // then
     await service.getRecommendMovies(q).then(response => {
@@ -34,7 +27,7 @@ it('[movie-recommend-service : 02] shouldn\'t get any recommend movie response w
     const q: Movie.MovieRecommendRequest = { city: 'InvalidCityName' };
 
     // when
-    const service: Movie.MovieRecommendService = Container.get<Movie.MovieRecommendService>(ServiceType.TYPE_MOVIE.RECOMMEND);
+    const service = new MovieRecommendService();
 
     // then
     const response = await service.getRecommendMovies(q).
