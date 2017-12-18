@@ -1,4 +1,4 @@
-import { injectable } from 'inversify'
+import { injectable } from 'react-native-modular-bootstrapper'
 
 @injectable()
 export default abstract class RESTApiClient {

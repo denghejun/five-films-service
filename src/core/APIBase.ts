@@ -1,7 +1,7 @@
 // import RNFetch from 'react-native-fetch-blob'
 import APIOption from './APIOption'
 import RESTApiClient from './RESTApiClient'
-import { injectable } from 'inversify'
+import { injectable } from 'react-native-modular-bootstrapper'
 
 @injectable()
 export default abstract class APIBase<T extends APIOption> extends RESTApiClient {

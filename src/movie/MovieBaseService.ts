@@ -1,7 +1,7 @@
 import * as Expo from 'expo'
 import * as merge from 'merge/merge'
 import { APIBase, APIOption } from '../core'
-import { injectable } from 'inversify'
+import { injectable } from 'react-native-modular-bootstrapper'
 
 @injectable()
 export default abstract class MovieBaseService extends APIBase<APIOption> {

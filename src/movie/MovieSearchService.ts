@@ -2,7 +2,7 @@ import MovieBaseService from './MovieBaseService'
 import { APIOption } from '../core'
 import * as Expo from 'expo'
 import { Movie, Common } from '@colorfulwindmill/five-films-interface'
-import { injectable } from 'inversify'
+import { injectable } from 'react-native-modular-bootstrapper'
 
 @injectable()
 export class MovieSearchService extends MovieBaseService implements Movie.MovieSearchService {

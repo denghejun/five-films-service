@@ -1,6 +1,7 @@
 import 'react-native'
 import * as React from 'react'
 import { BrowserService } from '../../../index'
+import { AppBootstrapper } from 'react-native-modular-bootstrapper'
 
 it('[common-browser-open : 01] should has no error to open baidu.com', async () => {
   // given
