@@ -17,9 +17,7 @@
     "setupFiles": [
       "./jest-setup.js"
     ],
-    "transformIgnorePatterns": [
-      "!node_modules/@colorfulwindmill/five-films-interface/"
-    ],
+    "transformIgnorePatterns": [],
     "testMatch": [
       "**/?(*.)(spec|test).ts?(x)"
     ]
