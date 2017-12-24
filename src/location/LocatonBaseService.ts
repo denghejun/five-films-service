@@ -16,6 +16,8 @@ export default class LocatonBaseService extends APIBase<APIOption> {
       ak: this.option.apiKey,
       output: 'json',
       pois: 0
-    }, request);
+    }, {
+        location: `${request.latitude},${request.longitude}`
+      });
   }
 }
