@@ -3,7 +3,7 @@ import MovieBaseService from './MovieBaseService'
 import { APIOption } from '../core'
 import { Movie, Common } from '@colorfulwindmill/five-films-interface'
 import { injectable } from 'react-native-modular-bootstrapper'
-import { mockMovieRecommendResponse } from './mock/MockMovieRecommendResponse'
+import { MovieRecommendCommandProxy } from './commands'
 
 @injectable()
 export class MovieRecommendService extends MovieBaseService implements Movie.MovieRecommendService {
@@ -12,17 +12,6 @@ export class MovieRecommendService extends MovieBaseService implements Movie.Mov
   }
 
   public async getRecommendMovies(request: Movie.MovieRecommendRequest): Promise<Movie.MovieRecommendResponse> {
-    if (request.mock) {
-      return mockMovieRecommendResponse;
-    } else {
-      const response: Movie.MovieRecommendResponse = await this.get<Movie.MovieRecommendRequest, Movie.MovieRecommendResponse>(request);
-      if (response === undefined || response.error_code !== 0) {
-        return Promise.reject<Movie.MovieRecommendResponse>(
-          new Common.Error<Movie.MovieRecommendResponse>(response.reason, response));
-      }
-      else {
-        return response;
-      }
-    }
+    return (await new MovieRecommendCommandProxy().execute(request)).response;
   }
 }
