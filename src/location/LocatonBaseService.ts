@@ -1,6 +1,6 @@
 import { APIBase, APIOption } from '../core'
 import * as Expo from 'expo'
-import merge from 'merge/merge'
+import * as merge from 'merge/merge'
 import { Location } from '@colorfulwindmill/five-films-interface'
 
 export default class LocatonBaseService extends APIBase<APIOption> {
