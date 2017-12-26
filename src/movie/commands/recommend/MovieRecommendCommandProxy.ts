@@ -1,4 +1,4 @@
-import { CommandProxy } from '../../core/command'
+import { CommandProxy } from '../../../core/command'
 import { Movie } from '@colorfulwindmill/five-films-interface'
 import { MovieRecommandServiceAPICommand } from './MovieRecommandServiceAPICommand'
 import { MovieRecommendServiceMockCommand } from './MovieRecommendServiceMockCommand'

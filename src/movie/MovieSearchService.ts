@@ -4,6 +4,7 @@ import * as Expo from 'expo'
 import { Movie, Common } from '@colorfulwindmill/five-films-interface'
 import { injectable } from 'react-native-modular-bootstrapper'
 import { mockMovieSearchResponse } from './mock/MockMovieSearchResponse'
+import { MovieSearchServiceCommandProxy } from './commands'
 
 @injectable()
 export class MovieSearchService extends MovieBaseService implements Movie.MovieSearchService {
@@ -12,17 +13,6 @@ export class MovieSearchService extends MovieBaseService implements Movie.MovieS
   }
 
   public async search(request: Movie.MovieSearchRequest): Promise<Movie.MovieSearchResponse> {
-    if (request.mock) {
-      return mockMovieSearchResponse;
-    } else {
-      const response: Movie.MovieSearchResponse = await this.get<Movie.MovieSearchRequest, Movie.MovieSearchResponse>(request);
-      if (response === undefined || response.error_code !== 0) {
-        return Promise.reject<Movie.MovieSearchResponse>(
-          new Common.Error<Movie.MovieSearchResponse>(response.reason, response));
-      }
-      else {
-        return response;
-      }
-    }
+    return (await new MovieSearchServiceCommandProxy().execute(request)).response;
   }
 }

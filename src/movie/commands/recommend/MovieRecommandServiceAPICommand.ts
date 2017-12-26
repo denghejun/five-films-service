@@ -1,6 +1,6 @@
-import { ICommand, ExecuteResult } from '../../core'
+import { ICommand, ExecuteResult } from '../../../core'
 import { Movie } from '@colorfulwindmill/five-films-interface'
-import { MovieRecommendBiz } from '../biz'
+import { MovieRecommendBiz } from '../../biz'
 
 export class MovieRecommandServiceAPICommand implements ICommand<Movie.MovieRecommendRequest, Movie.MovieRecommendResponse> {
     public canExecute(request: Movie.MovieRecommendRequest): boolean {

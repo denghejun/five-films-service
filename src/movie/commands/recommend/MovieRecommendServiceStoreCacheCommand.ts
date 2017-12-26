@@ -1,4 +1,4 @@
-import { ICommand, ExecuteResult } from '../../core'
+import { ICommand, ExecuteResult } from '../../../core'
 import { Movie } from '@colorfulwindmill/five-films-interface'
 import Cache from 'react-native-cache-store'
 
