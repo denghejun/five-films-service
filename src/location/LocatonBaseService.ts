@@ -1,6 +1,5 @@
 import { APIBase, APIOption } from '../core'
 import * as Expo from 'expo'
-import * as merge from 'merge/merge'
 import { Location } from '@colorfulwindmill/five-films-interface'
 
 export default class LocatonBaseService extends APIBase<APIOption> {
@@ -11,12 +10,14 @@ export default class LocatonBaseService extends APIBase<APIOption> {
     } as APIOption;
   }
 
-  protected before(request: Location.LocationSearchRequest): Location.LocationSearchRequest {
-    return merge(true, {
-      ak: this.option.apiKey,
-      output: 'json',
-      pois: 0
-    }, {
+  protected before(request: Location.LocationSearchRequest): any {
+    return Object.assign({},
+      {
+        ak: this.option.apiKey,
+        output: 'json',
+        pois: 0
+      },
+      {
         location: `${request.latitude},${request.longitude}`
       });
   }

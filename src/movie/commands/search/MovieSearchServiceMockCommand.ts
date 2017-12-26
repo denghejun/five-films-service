@@ -1,6 +1,6 @@
 import { ICommand, ExecuteResult } from '../../../core'
 import { Movie } from '@colorfulwindmill/five-films-interface'
-import { mockMovieSearchResponse } from '../../mock/MockMovieSearchResponse'
+import { mockMovieSearchResponse } from '../../mock'
 
 export class MovieSearchServiceMockCommand implements ICommand<Movie.MovieSearchRequest, Movie.MovieSearchResponse> {
   public canExecute(request: Movie.MovieSearchRequest): boolean {

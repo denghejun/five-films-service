@@ -1,5 +1,4 @@
 import * as Expo from 'expo'
-import * as merge from 'merge/merge'
 import { APIBase, APIOption } from '../core'
 import { injectable } from 'react-native-modular-bootstrapper'
 
@@ -15,7 +14,7 @@ export default abstract class MovieBaseService extends APIBase<APIOption> {
   protected abstract getBaseUri(): string;
 
   protected before(request: any): any {
-    return merge.recursive(true, {
+    return Object.assign({}, {
       key: this.option.apiKey,
       dtype: 'json'
     }, request);
