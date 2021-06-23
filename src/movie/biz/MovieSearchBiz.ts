@@ -1,10 +1,10 @@
 import MovieBaseService from '../MovieBaseService'
-import * as Expo from 'expo'
+import Constants  from 'expo-constants'
 import { Movie, Common } from '@colorfulwindmill/five-films-interface'
 
 export class MovieSearchBiz extends MovieBaseService implements Movie.MovieSearchService {
   protected getBaseUri(): string {
-    return Expo.Constants.manifest.extra.api.movie.searchServiceUri;
+    return Constants.manifest.extra.api.movie.searchServiceUri;
   }
 
   public async search(request: Movie.MovieSearchRequest): Promise<Movie.MovieSearchResponse> {

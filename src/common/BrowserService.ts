@@ -1,6 +1,6 @@
 import * as Interfaces from '@colorfulwindmill/five-films-interface'
 import { processColor } from 'react-native'
-import { WebBrowser } from 'expo'
+import * as WebBrowser  from 'expo-web-browser'
 import { injectable } from 'react-native-modular-bootstrapper'
 
 @injectable()

@@ -1,6 +1,6 @@
 import MovieBaseService from './MovieBaseService'
 import { APIOption } from '../core'
-import * as Expo from 'expo'
+import Constants  from 'expo-constants'
 import { Movie, Common } from '@colorfulwindmill/five-films-interface'
 import { injectable } from 'react-native-modular-bootstrapper'
 import { mockMovieSearchResponse } from './mock/MockMovieSearchResponse'
@@ -9,7 +9,7 @@ import { MovieSearchServiceCommandProxy } from './commands'
 @injectable()
 export class MovieSearchService extends MovieBaseService implements Movie.MovieSearchService {
   protected getBaseUri(): string {
-    return Expo.Constants.manifest.extra.api.movie.searchServiceUri;
+    return Constants.manifest.extra.api.movie.searchServiceUri;
   }
 
   public async search(request: Movie.MovieSearchRequest): Promise<Movie.MovieSearchResponse> {

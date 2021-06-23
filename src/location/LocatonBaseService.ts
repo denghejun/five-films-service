@@ -1,12 +1,13 @@
 import { APIBase, APIOption } from '../core'
-import * as Expo from 'expo'
+import Constants  from 'expo-constants'
 import { Location } from '@colorfulwindmill/five-films-interface'
 
 export default class LocatonBaseService extends APIBase<APIOption> {
   protected getAPIOption() {
+    
     return {
-      apiKey: Expo.Constants.manifest.extra.api.location.apiKey,
-      baseUri: Expo.Constants.manifest.extra.api.location.uri
+      apiKey: Constants.manifest.extra.api.location.apiKey,
+      baseUri: Constants.manifest.extra.api.location.uri
     } as APIOption;
   }
 

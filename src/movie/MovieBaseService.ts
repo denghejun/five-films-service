@@ -1,4 +1,4 @@
-import * as Expo from 'expo'
+import Constants  from 'expo-constants'
 import { APIBase, APIOption } from '../core'
 import { injectable } from 'react-native-modular-bootstrapper'
 
@@ -7,7 +7,7 @@ export default abstract class MovieBaseService extends APIBase<APIOption> {
   protected getAPIOption(): APIOption {
     return {
       baseUri: this.getBaseUri(),
-      apiKey: Expo.Constants.manifest.extra.api.movie.apiKey,
+      apiKey: Constants.manifest.extra.api.movie.apiKey,
     } as APIOption;
   }
 
